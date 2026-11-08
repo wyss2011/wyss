@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "blockbench": {
+      "command": "node",
+      "args": ["D:\\tools\\blockbench-mcp\\dist\\index.js"],
+      "env": {
+        "BLOCKBENCH_MCP_PORT": "8787"
+      }
+    }
+  }
+}

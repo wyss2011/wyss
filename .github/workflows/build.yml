@@ -1,0 +1,45 @@
+name: build-1211
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Download dependency jars
+        run: |
+          set -e
+          mkdir -p libs
+          dl() { echo "==> $1"; curl -fsSL --retry 3 -o "$1" "$2"; }
+          dl libs/geckolib-fabric-1.21.11-5.4.5.jar       "https://cdn.modrinth.com/data/8BmcQJ2H/versions/G1BvHQDL/geckolib-fabric-1.21.11-5.4.5.jar"
+          dl libs/cardinal-components-api-7.3.2.jar       "https://cdn.modrinth.com/data/K01OU20C/versions/HZMLTuxY/cardinal-components-api-7.3.2.jar"
+          dl "libs/placeholder-api-2.8.2+1.21.10.jar"     "https://cdn.modrinth.com/data/eXts2L7r/versions/qxjzQ9xY/placeholder-api-2.8.2%2B1.21.10.jar"
+          dl libs/modmenu-17.0.1.jar                      "https://cdn.modrinth.com/data/mOgUt4GM/versions/cLkYaVuL/modmenu-17.0.1.jar"
+          dl libs/Jade-1.21.11-Fabric-21.1.6.jar          "https://cdn.modrinth.com/data/nvQzSEkH/versions/swJhAyak/Jade-1.21.11-Fabric-21.1.6.jar"
+          ls -lh libs
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Build
+        run: ./gradlew build --no-daemon --console=plain --stacktrace
+
+      - name: Upload jars
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: needsofnature-1.21.11-jars
+          if-no-files-found: warn
+          path: build/libs/*.jar

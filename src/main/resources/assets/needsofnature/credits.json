@@ -1,0 +1,112 @@
+{
+  "notice": "Needs Of Nature is COMPLETELY FREE and should only be downloaded from the official project page. If you paid for it, it was sold by a UNAUTHORIZED THIRD PARTY; please report it on the official project forum.",
+  "sections": [
+    {
+      "title": "Development",
+      "contributors": [
+        {
+          "name": "L1Z0",
+          "roles": [
+            "Project Lead",
+            "Programming",
+            "Modelling",
+            "Animating"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Contributors",
+      "contributors": [
+        {
+          "name": "Incarnadine",
+          "roles": [
+            "Game Design",
+            "Modelling",
+            "Animating",
+            "Testing"
+          ]
+        },
+        {
+          "name": "PercePerceiver ",
+          "roles": [
+            "Animating",
+            "Testing"
+          ]
+        },
+        {
+          "name": "ParmesanPrime ",
+          "roles": [
+            "Modelling",
+            "Animating",
+            "Testing"
+          ]
+        },
+        {
+          "name": "Seko",
+          "roles": [
+            "Art",
+            "Testing"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Additional Contributors",
+      "contributors": [
+        {
+          "name": "ShinyCradily",
+          "roles": [
+            "Testing",
+            "Modelling help"
+          ]
+        },
+        {
+          "name": "ChristmasPuffin",
+          "roles": [
+            "Testing",
+            "Modelling Help"
+          ]
+        },
+        {
+          "name": "Paladin Fox",
+          "roles": [
+            "Testing"
+          ]
+        },
+        {
+          "name": "Mowl",
+          "roles": [
+            "Testing"
+          ]
+        },
+        {
+          "name": "污绅",
+          "roles": [
+            "Testing"
+          ]
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "category": "Sound Effects",
+      "title": "Shinlalala's Lewd Sound Pack",
+      "creator": "Shinlalala",
+      "source": "itch.io",
+      "source_url": "https://shinlalala.itch.io/shinlalalas-lewd-sound-pack",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "category": "Sound Effects",
+      "title": "Tearing Corduroy Shirt SFX",
+      "creator": "rupertcole",
+      "source": "Pixabay",
+      "source_url": "https://pixabay.com/sound-effects/household-tearing-corduroy-shirt-16734/",
+      "license": "Pixabay Content License",
+      "license_url": "https://pixabay.com/service/license-summary/"
+    }
+  ]
+}

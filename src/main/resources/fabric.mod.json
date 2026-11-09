@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "needsofnature",
+  "version": "1.4.4",
+  "name": "NeedsOfNature",
+  "description": "Magic mod using AnimationDirector to play animations.",
+  "license": "MPL-2.0",
+  "icon": "assets/needsofnature/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.nonid.NeedsOfNature"
+    ],
+    "client": [
+      "com.nonid.NeedsOfNatureClient"
+    ],
+    "modmenu": [
+      "com.nonid.integration.NonModMenuIntegration"
+    ],
+    "jade": [
+      "com.nonid.integration.jade.NonJadePlugin"
+    ]
+  },
+  "mixins": [
+    "needsofnature.animation.mixins.json",
+    {
+      "config": "needsofnature.animation.client.mixins.json",
+      "environment": "client"
+    },
+    "needsofnature.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "\u003e\u003d0.18.2",
+    "minecraft": "~1.21.11",
+    "java": "\u003e\u003d21",
+    "fabric-api": "*",
+    "geckolib": "\u003e\u003d5.4.5"
+  },
+  "breaks": {
+    "animationframework": "*"
+  },
+  "suggests": {
+    "jade": "*",
+    "trinkets": "*",
+    "quickskin": "*",
+    "skin_overrides": "*"
+  }
+}

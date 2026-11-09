@@ -1,0 +1,48 @@
+{
+	"required": true,
+	"package": "com.nonid.mixin",
+	"plugin": "com.nonid.mixin.NonMixinPlugin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"AnimalEntityBreedingMixin",
+		"AnimalMateGoalAnimationBreedingMixin",
+		"BrewingRecipeRegistryMixin",
+		"CreeperEntityNoNAnimationMixin",
+		"FleeEntityGoalMixin",
+		"MobEntityGenderMixin",
+		"MobEntityEnergyMixin",
+		"MobEntityPregnancyFriendlyTargetMixin",
+		"EntityGenderPersistenceMixin",
+		"EntityEnergyPersistenceMixin",
+		"FileResourcePackProviderAccessor",
+		"PlayerEntityEnergyMixin",
+		"PlayerEntityDestroyedSkinMixin",
+		"PlayerEntityGenderMixin",
+		"PlayerPregnancyMixin",
+		"PlayerLiquidMixin",
+		"PlayerLiquidMovementMixin",
+		"ProjectileEntityAnimationRescueMixin",
+		"ResourcePackManagerNoNPackMixin",
+		"ServerPlayerEntityDamageMixin",
+		"LivingEntityLiquidJumpMixin",
+		"LivingEntityLiquidBottleConsumeMixin"
+	],
+	"client": [
+		"client.GameRendererReactiveImpactFovMixin",
+		"client.InGameHudMixin",
+		"client.StatusEffectsDisplayMixin",
+		"client.EntityRendererDebugNameMixin",
+		"client.HandledScreenAccessor",
+		"client.LivingEntityRendererDebugLabelMixin",
+		"client.PlayerEntityRendererDestroyedSkinMixin",
+		"client.LivingEntityRendererPlayerTextureMixin",
+		"client.TranslationStorageStatLabelMixin",
+		"client.ResourcePackOrganizerHideNoNExternalMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

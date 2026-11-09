@@ -1,0 +1,23 @@
+{
+	"required": true,
+	"package": "com.nonid.internal.animation.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"EntityPushAwayMixin",
+		"LivingEntityPushableMixin",
+		"LivingEntityDamageMixin",
+		"MobEntityIgnoreAttackersMixin",
+		"ServerPlayNetworkHandlerMixin",
+		"TargetPredicateMixin"
+	],
+	"client": [
+		"client.EntityPushAwayMixin",
+		"client.LivingEntityPushableMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

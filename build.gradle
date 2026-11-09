@@ -37,8 +37,9 @@ dependencies {
 	}
 
 	// Trinkets 没有公开的 1.21.11 构建，相关集成已换成空实现（NonTrinketsCompat）。
-	// Buttplug.io 是可选功能，从 Maven Central 取。
+	// Buttplug.io 是可选功能，从 Maven Central 取（主体 + jetty 传输层是两个 artifact）
 	implementation "io.github.blackspherefollower:buttplug4j:4.0.278"
+	implementation "io.github.blackspherefollower:buttplug4j.connectors.jetty.websocket.client:4.0.278"
 }
 
 processResources {
